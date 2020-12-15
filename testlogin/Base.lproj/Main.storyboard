@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testlogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-xO-jeG">
+                                <rect key="frame" x="20" y="244" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TqB-vi-tJf">
+                                <rect key="frame" x="20" y="286" width="374" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2z-vZ-T6Y">
+                                <rect key="frame" x="157.5" y="328" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E2z-vZ-T6Y" secondAttribute="height" multiplier="33:10" id="iox-qs-tys"/>
+                                </constraints>
+                                <state key="normal" title="登录MunPage"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsb-mZ-yvS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwY-jN-qRN">
+                                <rect key="frame" x="176" y="366" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FwY-jN-qRN" secondAttribute="height" multiplier="31:15" id="yly-rG-lzP"/>
+                                </constraints>
+                                <state key="normal" title="申请授权"/>
+                                <connections>
+                                    <action selector="tokenButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTS-wW-chk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-6Q-EpU">
+                                <rect key="frame" x="20" y="44" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Ty-6Q-EpU" secondAttribute="trailing" constant="20" id="7Gv-ee-uC4"/>
+                            <constraint firstItem="TqB-vi-tJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8XV-Xc-E3u"/>
+                            <constraint firstItem="Ah3-xO-jeG" firstAttribute="top" secondItem="2Ty-6Q-EpU" secondAttribute="bottom" constant="200" id="BA4-sb-tJD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TqB-vi-tJf" secondAttribute="trailing" constant="20" id="D8e-Ew-5iV"/>
+                            <constraint firstItem="E2z-vZ-T6Y" firstAttribute="top" secondItem="TqB-vi-tJf" secondAttribute="bottom" constant="8" id="EZa-yA-2Qf"/>
+                            <constraint firstItem="FwY-jN-qRN" firstAttribute="top" secondItem="E2z-vZ-T6Y" secondAttribute="bottom" constant="8" id="HyY-q7-ywr"/>
+                            <constraint firstItem="TqB-vi-tJf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JpE-2x-LGy"/>
+                            <constraint firstItem="Ah3-xO-jeG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ey8-41-Apc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ah3-xO-jeG" secondAttribute="trailing" constant="20" id="g6w-8Z-qb4"/>
+                            <constraint firstItem="E2z-vZ-T6Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hdu-oi-kMG"/>
+                            <constraint firstItem="FwY-jN-qRN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rIA-q5-cwk"/>
+                            <constraint firstItem="2Ty-6Q-EpU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tX3-pL-WhO"/>
+                            <constraint firstItem="TqB-vi-tJf" firstAttribute="top" secondItem="Ah3-xO-jeG" secondAttribute="bottom" constant="8" id="wa6-ta-7cT"/>
+                            <constraint firstItem="2Ty-6Q-EpU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zJz-hi-jiW"/>
+                            <constraint firstItem="2Ty-6Q-EpU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zhR-ed-Vkr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="2Ty-6Q-EpU" id="CLh-Yy-J2K"/>
+                        <outlet property="passwordInputBox" destination="TqB-vi-tJf" id="WAE-1Y-SmK"/>
+                        <outlet property="tokenButton" destination="FwY-jN-qRN" id="hJY-jF-e7V"/>
+                        <outlet property="usernameInputBox" destination="Ah3-xO-jeG" id="y6q-x2-AGB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
